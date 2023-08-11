@@ -1,0 +1,15 @@
+.background {
+    background-color: black;
+    color: white;
+}
+
+.hacho > *, .hacho{
+    transition: transform 1s, color 1s;
+    &:hover {
+        transform: scale(1.05);
+        color: red;
+    }
+    .hacho-name {}
+    .hacho-subtitles {}
+}
+
