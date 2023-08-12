@@ -6,6 +6,16 @@ const routes: Routes = [
   path: 'youtube',
   loadChildren: () => import('./feature/youtube/youtube.module')
   .then(m => m.YoutubeModule)
+},
+{
+  path: 'video-tools',
+  loadChildren: () => import('./feature/video-tools/video-tools.module')
+  .then(m => m.VideoToolsModule)
+},
+{
+  path: 'podcast-dex',
+  loadChildren: () => import('./feature/podcast-dex/podcast-dex.module')
+  .then(m => m.PodcastDexModule)
 }];
 
 @NgModule({
