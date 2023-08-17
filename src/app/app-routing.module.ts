@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './shared/status-page/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,15 @@ const routes: Routes = [
     path: 'podcast-dex',
     loadChildren: () => import('./feature/podcast-dex/podcast-dex.module')
     .then(m => m.PodcastDexModule)
-  }];
+  },
+  { path: '**', pathMatch: 'full', component: NotFoundComponent }
+  /*
+  {
+    path: '**',
+    loadChildren: () => import('./shared/status-page/not-found/not-found.module')
+    .then(m => m.NotFoundModule)
+  }*/
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
