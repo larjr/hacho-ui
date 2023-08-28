@@ -23,6 +23,11 @@ const routes: Routes = [
     loadChildren: () => import('./feature/podcast-dex/podcast-dex.module')
     .then(m => m.PodcastDexModule)
   },
+  {
+    path: 'status',
+    loadChildren: () => import('./feature/status-page/status-page.module')
+    .then(m => m.StatusPageModule)
+  },
   { path: '**', pathMatch: 'full', component: NotFoundComponent }
   /*
   {
