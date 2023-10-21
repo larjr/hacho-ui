@@ -1,3 +1,9 @@
 <p>status-page works!</p>
 <hr>
 <span>Status e Comunicacao com o BackEnd: {{status}}</span>
+
+<div *ngIf="hasError">
+    <p *ngFor="let alert of alerts">
+        <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+    </p>
+</div>
